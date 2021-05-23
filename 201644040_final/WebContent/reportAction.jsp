@@ -30,9 +30,7 @@ if(userID == null) {
 	script.println("alert('로그인을 해주세요.');");
 	script.println("location.href = 'userLogin.jsp'");
 	script.println("</script>");
-
 	script.close();
-
 	return;
 
 }
@@ -58,16 +56,15 @@ if (reportTitle == null || reportContent == null) {
 	script.println("history.back();");
 	script.println("</script>");
 	script.close();
-
 	return;
 
 }
 
 // 사용자에게 보낼 메시지를 기입
 
-String host = "http://localhost:8181/webproject";
+String host = "http://localhost:8181/201644040_final/";
 String from = "dwns1020@gmail.com";
-String to = "dwns1020@gmail.com";
+String to = "dwns1020@naver.com";
 String subject = "강의평가 사이트에서 접수된 신고 메일입니다.";
 String content = "신고자: " + userID + "<br>제목: " + reportTitle + "<br>내용: " + reportContent;
 
@@ -123,29 +120,22 @@ try{
 } catch(Exception e){
 
     e.printStackTrace();
-
 	PrintWriter script = response.getWriter();
-
 	script.println("<script>");
 	script.println("alert('오류가 발생했습니다.');");
 	script.println("history.back();");
 	script.println("</script>");
-
 	script.close();		
-
     return;
 
 }
 
 PrintWriter script = response.getWriter();
-
 script.println("<script>");
 script.println("alert('정상적으로 신고되었습니다.');");
 script.println("history.back();");
 script.println("</script>");
-
 script.close();		
-
 return;
 
 %>

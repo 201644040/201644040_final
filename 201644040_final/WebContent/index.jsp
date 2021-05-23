@@ -181,8 +181,8 @@ if(userID == null) {
 				<div class="row">
 					<div class="col-9 text-left">
 						성적<span style="color: red;"><%= evaluation.getCreditScore() %></span>
-						널널<span style="color: red;"><%= evaluation.getComfortableScore() %></span>
-						강의<span style="color: red;"><%= evaluation.getLectureScore() %></span>
+						분위기<span style="color: red;"><%= evaluation.getComfortableScore() %></span>
+						강의력<span style="color: red;"><%= evaluation.getLectureScore() %></span>
 						<span style="color: green;">(추천 : <%= evaluation.getLikeCount() %>)
 						</span>
 					</div>
@@ -318,41 +318,44 @@ if(userID == null) {
 						<div class="form-row">
 							<div class="form-group col-sm-3">
 								<label>종합</label> <select name="totalScore" class="form-control">
-									<option value="A" selected>A</option>
+									<option value=null disabled selected> </option>
+									<option value="A">A</option>
 									<option value="B">B</option>
 									<option value="C">C</option>
 									<option value="D">D</option>
-									<option value="F">F</option>
+									
 								</select>
 							</div>
 							<div class="form-group col-sm-3">
 								<label>성적</label> <select name="creditScore"
 									class="form-control">
-									<option value="A" selected>A</option>
+									<option value=null disabled selected> </option>
+									<option value="A">A</option>
 									<option value="B">B</option>
 									<option value="C">C</option>
 									<option value="D">D</option>
-									<option value="F">F</option>
+									
 								</select>
 							</div>
 							<div class="form-group col-sm-3">
-								<label>평가만족도</label> <select name="comfortableScore"
+								<label>분위기</label> <select name="comfortableScore"
 									class="form-control">
-									<option value="A" selected>A</option>
+									<option value=null disabled selected> </option>
+									<option value="A">A</option>
 									<option value="B">B</option>
 									<option value="C">C</option>
 									<option value="D">D</option>
-									<option value="F">F</option>
+									
 								</select>
 							</div>
 							<div class="form-group col-sm-3">
-								<label>강의</label> <select name="lectureScore"
+								<label>강의력</label> <select name="lectureScore"
 									class="form-control">
-									<option value="A" selected>A</option>
+									<option value=null disabled selected> </option>
+									<option value="A">A</option>
 									<option value="B">B</option>
 									<option value="C">C</option>
 									<option value="D">D</option>
-									<option value="F">F</option>
 								</select>
 							</div>
 						</div>
@@ -380,12 +383,12 @@ if(userID == null) {
 				<div class="modal-body">
 					<form action="./reportAction.jsp" method="post">
 						<div class="form-group">
-							<label>신고 제목</label> <input type="text" name="evaluationTime"
+							<label>신고 제목</label> <input type="text" name="reportTitle"
 								class="form-control" maxlength="30">
 						</div>
 						<div class="form-group">
 							<label>신고 내용</label>
-							<textarea name="evaluationContent" class="form-control"
+							<textarea name="reportContent" class="form-control"
 								maxlength="2048" style="height: 180px;"></textarea>
 						</div>
 						<div class="modal-footer">

@@ -30,7 +30,7 @@ public static String getClientIP(HttpServletRequest request) {
 %>
 
 <%
-
+	UserDAO userDAO = new UserDAO();
 	String userID = null;
 
 	if(session.getAttribute("userID") != null) {
@@ -48,7 +48,7 @@ public static String getClientIP(HttpServletRequest request) {
 
 		script.close();
 
-		return;
+	
 
 	}
 
@@ -78,13 +78,10 @@ public static String getClientIP(HttpServletRequest request) {
 			PrintWriter script = response.getWriter();
 
 			script.println("<script>");
-
 			script.println("alert('추천이 완료되었습니다.');");
 			script.println("location.href='index.jsp'");
 			script.println("</script>");
-
 			script.close();
-
 			return;
 
 		} else {
@@ -96,7 +93,7 @@ public static String getClientIP(HttpServletRequest request) {
 			script.println("history.back();");
 			script.println("</script>");
 			script.close();
-
+			return;
 		}
 
 	} else {
@@ -107,9 +104,7 @@ public static String getClientIP(HttpServletRequest request) {
 		script.println("alert('이미 추천을 누른 글입니다.');");
 		script.println("history.back();");
 		script.println("</script>");
-
 		script.close();
-
 		return;
 
 	}

@@ -30,7 +30,8 @@
 		return;
 
 	}
-
+	
+	request.setCharacterEncoding("UTF-8");
 	String lectureName = null;
 	String professorName = null;
 	int lectureYear = 0;

@@ -11,7 +11,7 @@ public class EvaluationDAO {
 
 	public EvaluationDAO() {
 			try {
-				String dbURL = "jdbc:mysql://localhost:3306/TUTORIAL?useUnicode=true&characterEncoding=UTF-8";
+				String dbURL = "jdbc:mysql://localhost:3306/LectureEvaluation?useUnicode=true&characterEncoding=UTF-8";
 				String dbID = "root";
 				String dbPassword = "root";
 				Class.forName("com.mysql.cj.jdbc.Driver");
