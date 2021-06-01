@@ -100,10 +100,6 @@ if(userID == null) {
 %>
 						<a class="dropdown-item" href="userLogin.jsp">로그인</a> <a
 							class="dropdown-item" href="userJoin.jsp">회원가입</a>
-						<%-- 						<%
-	} else if (userID == admin) {
-%>
-						<a class="dropdown-item" href="administration.jsp">회원 정보 관리</a> --%>
 						<%
 	} else {
 %>
@@ -114,10 +110,6 @@ if(userID == null) {
 
 			<form action="./index.jsp" method="get"
 				class="form-inline my2 my-lg-0">
-				<!-- <input type="text" name="search" class="form-control mr-sm-2"
-					type="search" placeholder="내용을 입력하세요." aria-label="search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button> -->
-				<!-- 중앙화면에 검색창 있기 때문에 삭제 -->
 			</form>
 		</div>
 	</nav>
